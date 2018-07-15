@@ -10,14 +10,14 @@
 //
 
 
-/*
+/* Dosent work
 for(var i = 1; i < 1000; ++i){
   console.log( (1/i).toFixed(60) );
 }
 */
-
 //console.log((1/71).toFixed(60));
 
+/*
 //long division generator
 var a = 1;
 var b = 7;
@@ -27,3 +27,28 @@ for (var i = 0; i < digits; i++) {
   console.log(a + " / "+ b + " = "+ n);
   a = a % b * 10;
 }
+*/
+
+function cycleLength(b) {
+  var hash = {};
+  var a = 1;
+  var t = 0;
+  do {
+    hash[a] = t;
+    a = a % b * 10;
+    t++;
+  } while (hash[a] === undefined);
+  return t - hash[a];
+}
+
+var result = -1;
+var d = -1;
+for(var i = 1; i <= 1000; ++i){
+  var temp = cycleLength(i);
+  if(temp > result){
+    result = temp;
+    d = i;
+  }
+}
+
+console.log("d = " + d);
