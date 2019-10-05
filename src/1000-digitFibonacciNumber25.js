@@ -9,7 +9,6 @@ while ((val+"").length < 1000) {
   m1 = m2;
   m2 = val;
   index += 1;
-  console.log(val);
 }
 
 console.log(index);
