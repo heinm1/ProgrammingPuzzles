@@ -7,7 +7,7 @@
 */
 
 
-public class TwoSum1 {
+public class TwoSumQ1 {
     public static void main(String[] args) {
         int[] options = new int[]{11, 15, 2, 7};
         int target = 9;
